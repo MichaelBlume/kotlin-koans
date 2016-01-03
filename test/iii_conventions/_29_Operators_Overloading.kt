@@ -2,7 +2,7 @@ package iii_conventions
 
 import junit.framework.Assert
 import org.junit.Test
-import iii_conventions.TimeInterval.*
+import iii_conventions.BaseTimeInterval.*
 
 class _29_Operators_Overloading {
     @Test fun testAddTimeIntervals() {

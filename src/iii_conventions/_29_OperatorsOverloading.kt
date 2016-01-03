@@ -1,7 +1,7 @@
 package iii_conventions
 
 import util.*
-import iii_conventions.TimeInterval.*
+import iii_conventions.BaseTimeInterval.*
 
 fun todoTask29(): Nothing = TODO(
     """
@@ -15,17 +15,15 @@ fun todoTask29(): Nothing = TODO(
         (2). Support adding several time intervals to a date. Add an extra class.
         If you have any problems, see the iii_conventions/_29_Tips.kt file.
     """,
-    references = { date: MyDate, timeInterval: TimeInterval ->
-        date.addTimeIntervals(timeInterval, 1)
+    references = { date: MyDate, baseTimeInterval: BaseTimeInterval ->
+        date.addTimeIntervals(baseTimeInterval, 1)
     })
 
 fun task29_1(today: MyDate): MyDate {
-    todoTask29()
-//    return today + YEAR + WEEK
+    return today + YEAR + WEEK
 }
 
 fun task29_2(today: MyDate): MyDate {
-    todoTask29()
-//    return today + YEAR * 2 + WEEK * 3 + DAY * 5
+    return today + ((YEAR + WEEK + DAY) * 2 + WEEK + DAY * 3)
 }
 
