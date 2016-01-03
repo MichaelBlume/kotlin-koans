@@ -1,6 +1,7 @@
 package v_builders
 
 import util.TODO
+import v_builders.examples.buildMap
 import java.util.*
 
 fun buildStringExample(): String {
@@ -28,12 +29,17 @@ fun todoTask37(): Nothing = TODO(
     """
 )
 
+fun <K, V> buildMap(build: HashMap<K, V>.() -> Unit): Map<K, V> {
+    val m = HashMap<K, V>()
+    m.build()
+    return m
+}
+
 fun task37(): Map<Int, String> {
-    todoTask37()
-//    return buildMap {
-//        put(0, "0")
-//        for (i in 1..10) {
-//            put(i, "$i")
-//        }
-//    }
+    return buildMap {
+        put(0, "0")
+        for (i in 1..10) {
+            put(i, "$i")
+        }
+    }
 }
