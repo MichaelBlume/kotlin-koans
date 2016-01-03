@@ -36,7 +36,7 @@ class Table: Tag("table")
 class Center: Tag("center")
 class TR: Tag("tr")
 class TD: Tag("td")
-class Text(val text: String): Tag("b") {
+class Text(val text: String): Tag("") {
     override fun toString() = text
 }
 
